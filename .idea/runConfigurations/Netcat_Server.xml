@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Netcat Server" type="Application" factoryName="Application" singleton="false">
+    <option name="MAIN_CLASS_NAME" value="Netcat" />
+    <module name="BidiNetcatTCP" />
+    <option name="PROGRAM_PARAMETERS" value="&quot;-l&quot; 2222" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
