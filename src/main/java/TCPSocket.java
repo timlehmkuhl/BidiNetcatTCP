@@ -56,19 +56,21 @@ public class TCPSocket {
      * @return String
      * @throws IOException
      */
-    public String receive(int maxBytes) {
-        String ret = "";
+    public String receive(int maxBytes) throws IOException {
+        BufferedReader bufferedReader = null;
+        bufferedReader = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
+
+        char[] buffer = new char[maxBytes];
+        int length = 0;
+        length = bufferedReader.read(buffer, 0, buffer.length);
         try {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            char[] buffer = new char[maxBytes];
-            bufferedReader.read(buffer, 0, buffer.length);
-
-            ret = new String(buffer, 0, buffer.length);
-
+            return new String(buffer, 0, length);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Client beendet!");
+            System.exit(0);
+            return "";
         }
-        return ret;
+
     }
 
     public void shutdown() {
