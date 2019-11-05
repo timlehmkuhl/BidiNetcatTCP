@@ -62,9 +62,9 @@ public class TCPSocket {
 
         char[] buffer = new char[maxBytes];
         int length = 0;
-        length = bufferedReader.read(buffer, 0, buffer.length);
         try {
-            return new String(buffer, 0, length);
+         length = bufferedReader.read(buffer, 0, buffer.length);
+         return new String(buffer, 0, length);
         } catch (Exception e) {
             System.err.println("Client beendet!");
             System.exit(0);
