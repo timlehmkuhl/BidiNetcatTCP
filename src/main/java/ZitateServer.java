@@ -13,7 +13,7 @@ public class ZitateServer {
         BufferedReader reader;
 
             reader = new BufferedReader(new FileReader(
-                    "G:\\InfProjekte\\BidiNetcatTCP\\src\\main\\resources\\zitate.txt"));
+                    "/Users/timmichaellehmkuhl/InfProjekte/bidinetcattcp/src/main/resources/zitate.txt"));
             String line = reader.readLine();
             while (line != null) {
 

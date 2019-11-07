@@ -4,7 +4,7 @@ public class Receiver extends Thread{
 	private Actor readprinter;
 	private Actor transceiver;
 	private String nachricht;
-    private static final int BUFSIZE = 508;
+    private static final int BUFSIZE = 10000;
 
 
 	public Receiver(TCPSocket socket, Actor readprinter, Actor transceiver){
